@@ -483,6 +483,13 @@ plugins:
   - techdocs-core
 ```
 
+> Note: When creating the documentation, mkDocs tries to download the font from Google. In an environment without Internet access, this results in errors. To cancel the download of the font, the addition: "name: Material" must be added. "font: false" alone is not sufficient.  The change must look like this:
+```markdown
+theme:
+  name: material
+  font: false
+```
+
 3. Create a `/docs` folder in the skeleton folder with at least an `index.md`
    file in it.
 
